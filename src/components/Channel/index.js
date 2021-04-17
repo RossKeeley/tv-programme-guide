@@ -178,23 +178,25 @@ const Channel = () => {
     
     return (
         <div className="channels">
-            {(data || []).map((channel) => {
-                return (
-                    <div className="channels__channel">
-                        <h3>{channel.channelName}</h3>
-                        <div className="channels__channel-movie-list">
-                            {(channel.movies || []).map((movie) => {
-                                return (
-                                    <div className="channels__channel-movie">
-                                        <p>{movie.title}</p>
-                                        
-                                    </div>
-                                )
-                            })}
+            <div className="channels__channel-box">
+                {(data || []).map((channel) => {
+                    return (
+                        <div className="channels__channel">
+                            <h3 className="channels__channel-name">{channel.channelName}</h3>
+                            <div className="channels__channel-movie-list">
+                                {(channel.movies || []).map((movie) => {
+                                    return (
+                                        <div className="channels__channel-movie">
+                                            <p className="channels__channel-movie-title">{movie.title}</p>
+                                            
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
-                    </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </div>
     )
 }

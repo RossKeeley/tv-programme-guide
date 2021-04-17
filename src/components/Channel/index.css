@@ -1,0 +1,50 @@
+.channels {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 800px;
+}
+
+.channels__channel-box {
+    height: 700px;
+    width: 1200px;
+}
+
+.channels__channel {
+    display: flex;
+    align-items: center;
+    float: left;
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    background: #0017B7;
+    color: #ffffff;
+    border: 2px solid #50B0F7;
+}
+
+.channels__channel-name {
+    height: 40px;
+    min-width: 250px;
+    text-transform: capitalize;
+    border-left: 2px solid #50B0F7;
+    border-right: 2px solid #50B0F7;
+}
+
+.channels__channel-movie-list {
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.channels__channel-movie {
+    height: 40px;
+    border-left: 2px solid #50B0F7;
+    border-right: 2px solid #50B0F7;
+    background: #0017B7;
+}
+
+.channels__channel-movie-title {
+    text-transform: capitalize;
+    color: #ffffff;
+}
