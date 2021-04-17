@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 
 const Channel = () => {
     
@@ -176,19 +177,21 @@ const Channel = () => {
     ]
     
     return (
-        <div>
+        <div className="channels">
             {(data || []).map((channel) => {
                 return (
-                    <div>
+                    <div className="channels__channel">
                         <h3>{channel.channelName}</h3>
-                        {(channel.movies || []).map((movie) => {
-                            return (
-                                <div>
-                                    <p>{movie.title}</p>
-                                    
-                                </div>
-                            )
-                        })}
+                        <div className="channels__channel-movie-list">
+                            {(channel.movies || []).map((movie) => {
+                                return (
+                                    <div className="channels__channel-movie">
+                                        <p>{movie.title}</p>
+                                        
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 )
             })}
