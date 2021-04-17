@@ -177,21 +177,21 @@ const Channel = () => {
     
     return (
         <div>
-            (data || []).map((channel) => {
+            {(data || []).map((channel) => {
                 return (
                     <div>
-                        <h3>{channel.name}</h3>
-                        (channel.movies || []).map((movie) => {
+                        <h3>{channel.channelName}</h3>
+                        {(channel.movies || []).map((movie) => {
                             return (
                                 <div>
                                     <p>{movie.title}</p>
                                     
                                 </div>
                             )
-                        })
+                        })}
                     </div>
                 )
-            })
+            })}
         </div>
     )
 }
